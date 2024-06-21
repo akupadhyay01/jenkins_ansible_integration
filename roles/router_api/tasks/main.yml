@@ -1,0 +1,6 @@
+---
+- import_tasks: saverpc.yml
+- import_tasks: updatevrf.yml
+# - import_tasks: configinterface.yml
+# - import_tasks: gigconfig.yml
+# - import_tasks: saveconfig.yml

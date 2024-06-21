@@ -1,0 +1,14 @@
+all:
+  children:
+    switches:
+      hosts:
+        s1:
+        s2:
+    routers:
+      hosts:
+        r1:
+        r2:
+
+
+
+    

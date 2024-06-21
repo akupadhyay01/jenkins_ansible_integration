@@ -1,0 +1,13 @@
+---
+- name: Configure DNS setting
+  cisco.nxos.nxos_config:
+    lines:
+      - ip domain-lookup
+      - ip domain-name abc.com
+  when: ansible_network_os == 'cisco.nxos.nxos'
+- name: Configure DNS server
+  cisco.nxos.nxos_config:
+    lines:
+      - "ip name-server {{ dns_servers | join(' ') }}"
+    parents: vrf context management
+  when: ansible_network_os == 'cisco.nxos.nxos'
