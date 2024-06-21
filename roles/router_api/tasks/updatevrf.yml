@@ -1,0 +1,5 @@
+---
+- name: "TASK 1: Update VRF config with NETCONF"
+  netconf_config:
+    content: "{{ lookup('template', 'templates/vpn.j2') }}"
+  

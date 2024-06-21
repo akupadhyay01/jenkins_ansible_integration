@@ -1,0 +1,6 @@
+---
+- name: "TASK 2: Save configuration"
+  netconf_rpc:
+    xmlns: "http://cisco.com/yang/cisco-ia"
+    rpc: "save-config"
+  ignore_errors: true

@@ -1,0 +1,8 @@
+---
+- name: Configure Gig interface
+  ios_config:
+    lines:
+      - interface Gi2
+      - ip address 192.168.2.1 255.255.255.0
+    parents: interface Gi2
+    when: ansible_network_os == 'ios'

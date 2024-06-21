@@ -1,0 +1,5 @@
+---
+- name: "Get config from IOS"
+  cisco.ios.ios_facts:
+    gather_subset:
+      - config
