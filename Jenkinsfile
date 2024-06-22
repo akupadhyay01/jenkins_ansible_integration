@@ -10,6 +10,7 @@ pipeline {
         }
     }
     
+    
     post {
         always {
             emailext body: "${env.BUILD_URL}\n${currentBuild.absoluteUrl}",
