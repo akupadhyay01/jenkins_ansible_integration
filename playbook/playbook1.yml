@@ -1,5 +1,5 @@
 ---
-- name: Playbook for switches
+- name: Playbook1
   hosts: 
     - switches
     - routers

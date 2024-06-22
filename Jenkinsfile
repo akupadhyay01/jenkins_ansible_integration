@@ -2,10 +2,30 @@ pipeline {
     agent any
     
     stages { 
-        
-        stage("execute_playbook") {
+
+        stage('Run Playbook 1') {
+            when {
+                changeset 'playbook/playbook1.yml'
+            }
             steps {
-                ansiblePlaybook credentialsId: '519f0365-2966-4af0-9f83-96360b212247', playbook: 'site.yml', vaultTmpPath: ''
+                ansiblePlaybook credentialsId: '519f0365-2966-4af0-9f83-96360b212247', playbook: 'playbook/playbook1.yml', vaultTmpPath: ''
+            }
+        }
+        stage('Run Playbook 1') {
+            when {
+                changeset 'playbook/playbook2.yml'
+            }
+            steps {
+                ansiblePlaybook credentialsId: '519f0365-2966-4af0-9f83-96360b212247', playbook: 'playbook/playbook2.yml', vaultTmpPath: ''
+            }
+        }  
+        
+        stage('Run Playbook 1') {
+            when {
+                changeset 'playbook/playbook3.yml'
+            }
+            steps {
+                ansiblePlaybook credentialsId: '519f0365-2966-4af0-9f83-96360b212247', playbook: 'playbook/playbook3.yml', vaultTmpPath: ''
             }
         }
     }

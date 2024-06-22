@@ -1,0 +1,9 @@
+---
+- name: Playbook2
+  hosts: 
+    - switches
+    - routers
+  roles:
+    - name: Executing roles for switches
+      role: "roles/switch_api"
+
