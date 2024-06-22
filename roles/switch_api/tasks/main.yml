@@ -1,4 +1,4 @@
 ---
-- import_tasks: sw_cli.yml
+# - import_tasks: sw_cli.yml
 - import_tasks: sw_netconf.yml
-- import_tasks: sw_restconf.yml
+# - import_tasks: sw_restconf.yml

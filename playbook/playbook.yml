@@ -1,13 +1,9 @@
 ---
-- hosts: 
+- name: Playbook for switches
+  hosts: 
     - switches
     - routers
   roles:
-    - name: "role for switches"
-      role: switch_api
-      tags: switches
-    - name: "role for routers"
-      role: router_api
-      tags: routers
-
+    - name: Executing roles for switches
+      role: "roles/switch_api"
 

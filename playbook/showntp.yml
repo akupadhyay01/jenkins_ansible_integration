@@ -1,0 +1,11 @@
+---
+- name: show ntp servers
+  hosts: switches
+  gather_facts: no
+
+  tasks:
+    - name: "TASK 3: Ensure outputs/ folder exists"
+      file:
+        path: "outputs"
+        state: directory
+      run_once: true

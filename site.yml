@@ -1,6 +1,3 @@
 ---
-# - import_playbook: playbook/iac_rc.yml
-# - import_playbook: playbook/vrf_getter_rc.yml
-# - import_playbook: playbook/iac_nc.yml
-# - import_playbook: playbook/vrf_getter_nc.yml
 - import_playbook: playbook/playbook.yml
+# - import_playbook: playbook/showntp.yml
