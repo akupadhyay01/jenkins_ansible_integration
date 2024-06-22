@@ -11,7 +11,7 @@ pipeline {
                 ansiblePlaybook credentialsId: '519f0365-2966-4af0-9f83-96360b212247', playbook: 'playbook/playbook1.yml', vaultTmpPath: ''
             }
         }
-        stage('Run Playbook 1') {
+        stage('Run Playbook 2') {
             when {
                 changeset 'playbook/playbook2.yml'
             }
@@ -20,7 +20,7 @@ pipeline {
             }
         }  
         
-        stage('Run Playbook 1') {
+        stage('Run Playbook 3') {
             when {
                 changeset 'playbook/playbook3.yml'
             }
